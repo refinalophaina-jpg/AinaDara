@@ -443,7 +443,7 @@ background:linear-gradient(135deg,var(--indigo),var(--purple));color:#fff;border
 /* ── SPOTLIGHT SEARCH ── */
 .spotlight-overlay{position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;padding-top:10vh;opacity:0;transition:opacity 0.18s;pointer-events:none}
 .spotlight-overlay.open{opacity:1;pointer-events:auto}
-.spotlight-box{width:min(90vw,640px);background:rgba(255,255,255,0.97);border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,0.3),0 8px 24px rgba(0,0,0,0.15);overflow:hidden;transform:translateY(-16px) scale(0.97);transition:transform 0.2s ease,opacity 0.2s;}
+.spotlight-box{width:min(90vw,640px);background:var(--card,rgba(255,255,255,0.97));border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,0.3),0 8px 24px rgba(0,0,0,0.15);overflow:hidden;transform:translateY(-16px) scale(0.97);transition:transform 0.2s ease,opacity 0.2s;}
 .spotlight-overlay.open .spotlight-box{transform:translateY(0) scale(1)}
 .spotlight-input-wrap{display:flex;align-items:center;padding:14px 18px;border-bottom:1px solid var(--sep);gap:10px}
 .spotlight-icon{font-size:1.3rem;flex-shrink:0;opacity:0.5}
@@ -543,6 +543,19 @@ body.dark-mode {
 body.dark-mode .score-bar { background: var(--card); }
 body.dark-mode .chapter-card { background: var(--card); }
 body.dark-mode canvas { filter: brightness(0.9) invert(0); }
+body.dark-mode .spotlight-box { background: rgba(44,44,46,0.97); }
+body.dark-mode .spotlight-input { color: #fff; }
+body.dark-mode .spotlight-input::placeholder { color: rgba(235,235,245,.5); }
+body.dark-mode .spotlight-item-title { color: #fff; }
+body.dark-mode .spotlight-item-sub { color: rgba(235,235,245,.6); }
+body.dark-mode .spotlight-cat { color: rgba(235,235,245,.5); }
+body.dark-mode .spotlight-footer { color: rgba(235,235,245,.5); }
+body.dark-mode .spotlight-kbd { background: rgba(120,120,128,.3); color: rgba(235,235,245,.5); border-color: rgba(84,84,88,.65); }
+body.dark-mode .spotlight-item:hover, body.dark-mode .spotlight-item.focused { background: rgba(10,132,255,0.2); }
+body.dark-mode .header { background: rgba(28,28,30,0.85); }
+body.dark-mode .tab-bar { background: rgba(28,28,30,0.92); }
+body.dark-mode .flashcard-back { background: var(--card); }
+body.dark-mode .fc-mode-tab.active { background: var(--card); }
 #darkModeToggle {
   position: fixed;
   top: 14px;
